@@ -4,6 +4,9 @@ import './styles.css';
 
 import datasetImage from '../../assets/dataset-cover.jpg';
 
+import parameterGamma from '../../assets/gamma_0-5.png';
+import parameterRegularization from '../../assets/regularization_0-10.png';
+
 function Home() {
 
     return (
@@ -11,7 +14,7 @@ function Home() {
             <h1>Modelo SVM</h1>
 
             <article id="apresentacao">
-                <strong>Previsão de Doença Cardiovascular</strong>
+                <h3>Previsão de Doença Cardiovascular</h3>
                 <img src={datasetImage} alt="dataset" />
                 <p>O banco de dados utilizado foi o <a href="https://www.kaggle.com/ronitf/heart-disease-uci">Heart Disease UCI</a>
                 que consiste em um dataset com 303 amostras de vários atributos de pacientes que foram
@@ -43,20 +46,47 @@ function Home() {
 
             <hr />
 
-            <article className="experimento">
-                <strong>Experimento</strong>
+            <article id="experimento">
+                <h3>Experimento</h3>
+                
                 <p>O experimento consistiu na utilização do modelo SVM para classificação
                 dos casos de previsão da doença.</p>
+                
                 <p>A base para treinamento consistiu no dataset mencionado acima, com 303 amostras
-                para sendo 90% para treinamento e 10% para teste, os dados foram embaralhados
+                sendo 90% para treinamento e 10% para teste, os dados foram embaralhados
                 antes de fazer a divisão.</p>
+                
                 <p>O modelo SVM possui diversos parâmetros para melhoria dos resultados, foi utilizado
                 variação nos parâmetros gama e regularização, cada um por vez.</p>
+                
+                <p>Para este experimento foi variado os parâmetros gama e regularização,
+                um de cada vez. O parâmetro regularização foi variado no intervalo de [0.1; 10)
+                com intervalos de 0.1 no valor da regularização, ou seja, [0.1, 0.2, 0.3, ... 9.9].
+                O parâmetro gama foi variado no intervalo de [0.1; 5) também com intervalos de 0.1 no valor
+                do gama, ou seja, [0.1, 0.2, 0.3, ..., 4.9].</p>
 
+                <img src={parameterGamma} alt="Parâmetro Gama" />
+                <p>A imagem acima apresenta o resultado da acurácia obtida para a variação do parâmetro gama.
+                Nela é possível perceber que a acurácia alcança o seu maior valor, para um valor de gama > 3.7.</p>
+
+                <img src={parameterRegularization} alt="Parâmetro Regularização" />
+                <p>A imagem acima apresenta o resultado da acurácia obtida na variação do parâmetro regularização
+                Neste caso os melhores resultados encontram-se entre 1.75 e 1.85.</p>
             </article>
 
+            <hr />
+
+            <article id="Análise do Dataset">
+                <h3>Análise do Dataset</h3>
+
+                
+                
+                
+            </article>
+
+
         </div>
-    );
+);
 
 };
 

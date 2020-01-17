@@ -7,9 +7,21 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.Home p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #606060;
+}
+
 .Home h1 {
     margin: 20px auto 20px;
     font-size: 40px;
+    color: #606060;
+}
+
+.Home h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    font-size: 20px;
     color: #606060;
 }
 
@@ -19,13 +31,6 @@
     margin: 10px auto 10px;
     width: 500px;
     height: 100%;
-}
-
-#apresentacao > strong {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 10px;
-    font-size: 20px;
-    color: #606060;
 }
 
 #apresentacao > img {
@@ -52,4 +57,12 @@
     border: 2px solid #d0d0d0;
     border-bottom: none;
     margin-top: 10px;
+}
+
+#experimento {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto 10px;
+    width: 500px;
+    height: 100%;
 }
