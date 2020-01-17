@@ -34,9 +34,26 @@ function Home() {
                 </ol>
                 <p>O último atributo, <i>target</i>, contém o resultado de saída esperado
                 1 para presença de doença ou 0 para ausência de doença cardiovascular. Totalizando 14 atributos</p>
+                <p>O dataset possui um problema de ausência de alguns dados, por exemplo,
+                alguns valores de pressão sanguínea são iguais a zero, o que de fato é impossível
+                para uma pessoa viva, estes casos são atributos que naquele paciente em questão,
+                não foi medido este atributo, sendo difícil a identificação e correção deste tipo
+                de dado, apenas foi considerado que valores inconsistentes foram mapeados para o número 0.</p>
             </article>
 
             <hr />
+
+            <article className="experimento">
+                <strong>Experimento</strong>
+                <p>O experimento consistiu na utilização do modelo SVM para classificação
+                dos casos de previsão da doença.</p>
+                <p>A base para treinamento consistiu no dataset mencionado acima, com 303 amostras
+                para sendo 90% para treinamento e 10% para teste, os dados foram embaralhados
+                antes de fazer a divisão.</p>
+                <p>O modelo SVM possui diversos parâmetros para melhoria dos resultados, foi utilizado
+                variação nos parâmetros gama e regularização, cada um por vez.</p>
+
+            </article>
 
         </div>
     );
