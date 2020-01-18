@@ -71,7 +71,7 @@ function Home() {
                 um de cada vez. O parâmetro regularização foi variado no intervalo de [0.1; 10)
                 com intervalos de 0.1 no valor da regularização, ou seja, [0.1, 0.2, 0.3, ... 9.9].
                 O parâmetro gama foi variado no intervalo de [0.1; 5) também com intervalos de 0.1 no valor
-                do gama, ou seja, [0.1, 0.2, 0.3, ..., 4.9].</p>
+                do gama, ou seja, [0.1, 0.2, 0.3, ..., 4.9].</p> 
 
                 <img src={parameterGamma} alt="Parâmetro Gama" />
                 <p>A imagem acima apresenta o resultado da acurácia obtida para a variação do parâmetro gama.
