@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 import './styles.css';
 
@@ -46,6 +48,13 @@ function Home() {
 
             <hr />
 
+            <article id="analise-dataset">
+                <h3>Análise do Dataset</h3>
+                <Link className="navigation-button" to="/data">Dataset Exploration</Link>
+            </article>
+
+            <hr />
+
             <article id="experimento">
                 <h3>Experimento</h3>
                 
@@ -53,7 +62,7 @@ function Home() {
                 dos casos de previsão da doença.</p>
                 
                 <p>A base para treinamento consistiu no dataset mencionado acima, com 303 amostras
-                sendo 90% para treinamento e 10% para teste, os dados foram embaralhados
+                sendo 95% para treinamento e 5% para teste, os dados foram embaralhados
                 antes de fazer a divisão.</p>
                 
                 <p>O modelo SVM possui diversos parâmetros para melhoria dos resultados, foi utilizado
@@ -72,18 +81,35 @@ function Home() {
                 <img src={parameterRegularization} alt="Parâmetro Regularização" />
                 <p>A imagem acima apresenta o resultado da acurácia obtida na variação do parâmetro regularização
                 Neste caso os melhores resultados encontram-se entre 1.75 e 1.85.</p>
+
             </article>
 
             <hr />
 
-            <article id="Análise do Dataset">
-                <h3>Análise do Dataset</h3>
-
+            <article id="metricas">
+                <h3>Resultados do Experimento</h3>
                 
-                
-                
+                <p>Pelo fato dos experimentos acima apresentaram melhores resultados
+                utilizando os parâmetros regularization C = 4, e gamma = 1.75, para
+                avaliar outras métricas, as métricas utilizadas serão:</p>
+                <ul>
+                    <li>Acurácia;</li>
+                    <li>Average Precision;</li>
+                    <li>Precision;</li>
+                    <li>Recall;</li>
+                    <li>F-measure.</li>
+                </ul>
+                <p>Os resultados obtidos foram:</p>
+                <ul>
+                    <li>Acurácia: 0,8125</li>
+                    <li>Average Precision: 0,7988</li>
+                    <li>Precision: 0,8181</li>
+                    <li>Recall: 0,9</li>
+                    <li>F-measure: 0,8571</li>
+                </ul>
+                {/* accuracy:  0.8125 recall_score:  0.9 average_precision_score:  0.7988636363636364 precision_score: 0.8181818181818182 f1_score: 0.8571428571428572
+ */}
             </article>
-
 
         </div>
 );
