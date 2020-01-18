@@ -66,3 +66,34 @@
     width: 500px;
     height: 100%;
 }
+
+#analise-dataset {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto 10px;
+    width: 500px;
+    height: 100%;
+}
+
+#analise-dataset .navigation-button {
+    width: fit-content;
+    padding:5px 10px 5px;
+    background-color: #c0c0c0;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px #d0d0d0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#resultado {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto 10px;
+    width: 500px;
+    height: 100%;
+}
+
+#resultado > ul > li {
+    color: #606060;
+    margin-bottom: 3px;
+}

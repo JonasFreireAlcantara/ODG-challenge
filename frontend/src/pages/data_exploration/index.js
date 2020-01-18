@@ -20,11 +20,7 @@ class DataExploration extends Component {
     }
 
     render () {
-
-        // console.log('==============');
-        // console.log(this.state)
         const { dataset } = this.state;
-        // console.log(dataset)
 
         return (
             <div className="Home">

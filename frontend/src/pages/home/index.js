@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 import './styles.css';
 
 import datasetImage from '../../assets/dataset-cover.jpg';
@@ -18,8 +17,8 @@ function Home() {
             <article id="apresentacao">
                 <h3>Previsão de Doença Cardiovascular</h3>
                 <img src={datasetImage} alt="dataset" />
-                <p>O banco de dados utilizado foi o <a href="https://www.kaggle.com/ronitf/heart-disease-uci">Heart Disease UCI</a>
-                que consiste em um dataset com 303 amostras de vários atributos de pacientes que foram
+                <p>O banco de dados utilizado foi o <a href="https://www.kaggle.com/ronitf/heart-disease-uci">Heart Disease UCI</a> que 
+                consiste em um dataset com 303 amostras de vários atributos de pacientes que foram
                 submetidos a exames para verificar a presença de alguma doença cardiovascular nos pacientes.
                 <br/>Os atributos presentes são:</p>
                 <ol>
@@ -76,21 +75,22 @@ function Home() {
 
                 <img src={parameterGamma} alt="Parâmetro Gama" />
                 <p>A imagem acima apresenta o resultado da acurácia obtida para a variação do parâmetro gama.
-                Nela é possível perceber que a acurácia alcança o seu maior valor, para um valor de gama > 3.7.</p>
+                Nela é possível perceber que a acurácia alcança o seu maior valor, para um valor de gama = 0.1.</p>
 
                 <img src={parameterRegularization} alt="Parâmetro Regularização" />
                 <p>A imagem acima apresenta o resultado da acurácia obtida na variação do parâmetro regularização
-                Neste caso os melhores resultados encontram-se entre 1.75 e 1.85.</p>
+                Neste caso os melhores resultados encontram-se entre 0.1 e 2.1 com uma ressalva no intervalo 0.8 e 1.2,
+                onde ocorre uma ligeira queda na acurácia.</p>
 
             </article>
 
             <hr />
 
-            <article id="metricas">
+            <article id="resultado">
                 <h3>Resultados do Experimento</h3>
                 
                 <p>Pelo fato dos experimentos acima apresentaram melhores resultados
-                utilizando os parâmetros regularization C = 4, e gamma = 1.75, para
+                utilizando os parâmetros regularization C = 2, e gamma = 0.1, para
                 avaliar outras métricas, as métricas utilizadas serão:</p>
                 <ul>
                     <li>Acurácia;</li>
@@ -101,14 +101,12 @@ function Home() {
                 </ul>
                 <p>Os resultados obtidos foram:</p>
                 <ul>
-                    <li>Acurácia: 0,8125</li>
-                    <li>Average Precision: 0,7988</li>
-                    <li>Precision: 0,8181</li>
-                    <li>Recall: 0,9</li>
-                    <li>F-measure: 0,8571</li>
+                    <li>Acurácia: 0.8125</li>
+                    <li>Average Precision: 0.7988</li>
+                    <li>Precision: 0.8181</li>
+                    <li>Recall: 0.9</li>
+                    <li>F-measure: 0.8571</li>
                 </ul>
-                {/* accuracy:  0.8125 recall_score:  0.9 average_precision_score:  0.7988636363636364 precision_score: 0.8181818181818182 f1_score: 0.8571428571428572
- */}
             </article>
 
         </div>
